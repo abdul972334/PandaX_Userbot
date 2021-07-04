@@ -1,14 +1,14 @@
 import time
 
-from PandaX_Usetbot.dB import *
-from PandaX_Usetbot.dB.core import *
-from PandaX_Usetbot.functions.all import *
-from PandaX_Usetbot.functions.asstcmd_db import *
-from PandaX_Usetbot.functions.broadcast_db import *
-from PandaX_Usetbot.functions.gban_mute_db import *
-from PandaX_Usetbot.functions.nsfw_db import *
-from PandaX_Usetbot.functions.sudos import *
-from PandaX_Usetbot.utils import *
+from PandaX_Userbot.dB import *
+from PandaX_Userbot.dB.core import *
+from PandaX_Userbot.functions.all import *
+from PandaX_Userbot.functions.asstcmd_db import *
+from PandaX_Userbot.functions.broadcast_db import *
+from PandaX_Userbot.functions.gban_mute_db import *
+from PandaX_Userbot.functions.nsfw_db import *
+from PandaX_Userbot.functions.sudos import *
+from PandaX_Userbot.utils import *
 from telethon import Button
 from telethon.tl import functions, types
 
