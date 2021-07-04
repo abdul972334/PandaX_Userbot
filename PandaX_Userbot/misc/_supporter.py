@@ -3,8 +3,8 @@ import os
 import re
 from pathlib import Path
 
-from pyPetercordPanda.misc._decorators import *
-from pyPetercordPanda.misc._wrappers import eod, eor
+from PandaX_Userbot.misc._decorators import *
+from PandaX_Userbot.misc._wrappers import eod, eor
 from telethon import events, types
 
 from plugins import *
