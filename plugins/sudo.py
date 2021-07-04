@@ -1,4 +1,3 @@
-
 """
 💐 Commands Available : pilih siapa saja orang yang dapat mengakses userbot milikmu.
 
@@ -25,7 +24,9 @@ async def _(ult):
         return await eod(ult, "`perintah ini dibatasi untuk anggota sudo!..`")
     inputs = ult.pattern_match.group(1)
     if str(ult.sender_id) in sudoers():
-        return await eod(ult, "`anggota sudo tidak dapat menambahkan anggota sudo baru!`", time=10)
+        return await eod(
+            ult, "`anggota sudo tidak dapat menambahkan anggota sudo baru!`", time=10
+        )
     ok = await eor(ult, "`memperbarui daftar anggota sudo...`")
     mmm = ""
     if ult.reply_to_msg_id:
@@ -104,7 +105,9 @@ async def _(ult):
                 mmm += f"`{id} bukan anggota sudo...`"
         elif del_sudo(id):
             if name != "":
-                mmm += f"**menghapus [{name}](tg://user?id={id}) dari anggota sudo.(s)**"
+                mmm += (
+                    f"**menghapus [{name}](tg://user?id={id}) dari anggota sudo.(s)**"
+                )
             else:
                 mmm += f"**menghapus **`{id}`** dari anggota sudo.(s)**"
         else:
