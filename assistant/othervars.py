@@ -350,7 +350,7 @@ async def pluginch(event):
     name = "Plugin Channel"
     async with event.client.conversation(pru) as conv:
         await conv.send_message(
-            "kirim id atau username channel dari mana anda ingin menginstal semua plugin.\n\natur ke ~ @TEAMSquadUserbotSupport jika ingin mendapatkan 1300+ plugins.\n\nklik /cancel untuk membatalkan.",
+            "kirim id atau username channel dari mana anda ingin menginstal semua plugin.\n\ ketik ini @TeamUserbotPluginsPanda jika ingin mendapatkan 1300+ plugins.\n\nklik /cancel untuk membatalkan.",
         )
         response = conv.wait_event(events.NewMessage(chats=pru))
         response = await response
