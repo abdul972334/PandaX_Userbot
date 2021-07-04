@@ -1,5 +1,3 @@
-
-
 from telethon.errors import ChatSendInlineForbiddenError
 from telethon.errors.rpcerrorlist import BotMethodInvalidError as bmi
 
