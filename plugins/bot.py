@@ -105,11 +105,11 @@ async def cmds(event):
     pattern="restart$",
 )
 async def restartbt(ult):
-    ok = await eor(ult, "`restarting sakura-ubot...`")
+    ok = await eor(ult, "`restarting Panda-userbot...`")
     if Var.HEROKU_API:
         await restart(ok)
     else:
-        await bash("pkill python3 && python3 -m pyPetercordPanda")
+        await bash("pkill python3 && python3 -m PandaX_Userbot")
 
 
 @ilhammansiz_cmd(pattern="shutdown$")
