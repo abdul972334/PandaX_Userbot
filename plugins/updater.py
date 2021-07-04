@@ -73,11 +73,11 @@ async def upstream(ups):
         repo = Repo.init()
         origin = repo.create_remote("upstream", off_repo)
         origin.fetch()
-        repo.create_head("main", origin.refs.main)
-        repo.heads.main.set_tracking_branch(origin.refs.main)
-        repo.heads.main.checkout(True)
+        repo.create_head("PandaUserbot", origin.refs.PandaUserbot)
+        repo.heads.PandaUserbot.set_tracking_branch(origin.refs.PandaUserbot)
+        repo.heads.PandaUserbot.checkout(True)
     ac_br = repo.active_branch.name
-    if ac_br != "main":
+    if ac_br != "PandaUserbot":
         await eod(
             pagal,
             f"**[UPDATER]:**` You are on ({ac_br})\n Please change to main branch.`",
