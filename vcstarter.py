@@ -1,11 +1,8 @@
 import json
-import os
 from json.decoder import JSONDecodeError
 
 from aiohttp import web
 from aiohttp.http_websocket import WSMsgType
-from PandaX_Userbot import udB, vcbot
-from PandaX_Userbot.dB.database import Var
 from telethon import TelegramClient
 from telethon.tl.functions.channels import GetFullChannelRequest
 from telethon.tl.functions.phone import (
@@ -14,6 +11,9 @@ from telethon.tl.functions.phone import (
     LeaveGroupCallRequest,
 )
 from telethon.tl.types import DataJSON
+
+from PandaX_Userbot import udB, vcbot
+from PandaX_Userbot.dB.database import Var
 
 LOG_CHANNEL = int(udB.get("LOG_CHANNEL"))
 if vcbot:
