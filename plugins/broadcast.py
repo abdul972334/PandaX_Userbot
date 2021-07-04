@@ -1,4 +1,3 @@
-
 """
 💐Commands Available
 
@@ -160,7 +159,9 @@ async def forw(event):
     channels = get_channels()
     x = await eor(event, "Sending...")
     if get_no_channels() == 0:
-        return await x.edit(f"mohon tambahkan channels dengan menggunakan `{hndlr}add` di dalamnya.")
+        return await x.edit(
+            f"mohon tambahkan channels dengan menggunakan `{hndlr}add` di dalamnya."
+        )
     error_count = 0
     sent_count = 0
     if event.reply_to_msg_id:
@@ -207,7 +208,9 @@ async def sending(event):
     error_count = 0
     sent_count = 0
     if get_no_channels() == 0:
-        return await x.edit(f"mohon tambahkan channels dengan menggunakan `{hndlr}add` di dalamnya.")
+        return await x.edit(
+            f"mohon tambahkan channels dengan menggunakan `{hndlr}add` di dalamnya."
+        )
     await x.edit("Sending....")
     if event.reply_to_msg_id:
         previous_message = await event.get_reply_message()
@@ -216,7 +219,9 @@ async def sending(event):
         if previous_message:
             for channel in channels:
                 try:
-                    await petercordpanda_bot.send_message(int(channel), previous_message)
+                    await petercordpanda_bot.send_message(
+                        int(channel), previous_message
+                    )
                     sent_count += 1
                     await x.edit(
                         f"Sent : {sent_count}\nError : {error_count}\nTotal : {len(channels)}",
