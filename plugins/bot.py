@@ -54,7 +54,7 @@ async def lol(ult):
     als = (get_string("alive_1")).format(
         header,
         OWNER_NAME,
-        ultroid_version,
+        petercordpanda_version,
         UltVer,
         uptime,
         pyver(),
