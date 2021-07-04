@@ -150,11 +150,11 @@ async def repo(e):
             title="petercordpanda userbot",
             description="USERBOT | TELETHON",
             thumb=wb(ultpic, 0, "image/jpeg", []),
-            text="• **🐼 PETERCORDPANDA 💐 USERBOT** •",
+            text="• **🐼 PANDA USERBOT 🐼** •",
             buttons=SUP_BUTTONS,
         ),
     ]
-    await e.answer(res, switch_pm="REPO♦ 🐼 PetercordPanda 💐.", switch_pm_param="start")
+    await e.answer(res, switch_pm="REPO♦ 🐼 Panda Userbot 🐼 💐.", switch_pm_param="start")
 
 
 @in_pattern("go")
