@@ -52,7 +52,7 @@ _main_help_menu = [
 
 SUP_BUTTONS = [
     [
-        Button.url("REP", url="https://github.com/IlhamMansiez/PetercordPanda"),
+        Button.url("REPO", url="https://github.com/IlhamMansiez/PandaX_Userbot"),
         Button.url(
             "ADDONS", url="https://github.com/IlhamMansiez/PetercordPandaAddons"
         ),
