@@ -9,7 +9,5 @@ async def _(event):
     ms = (end - start).microseconds / 1000
     await asst.send_message(
         event.chat_id,
-        f"┏━《 **𝗣 𝗔 𝗡 𝗗 𝗔** 》━\n",
-        f"┣➠  __Ping:__ `── {ms} milliseconds ──`\n",
-        f"┗➠ 𝗣 𝗔 𝗡 𝗗 𝗔 𝗨𝗦𝗘𝗥𝗕𝗢𝗧 ",
+        f"┏━《 **𝗣 𝗔 𝗡 𝗗 𝗔** 》━\n┣➠  __Ping:__ `── {ms} milliseconds ──\n┗➠ 𝗣 𝗔 𝗡 𝗗 𝗔 𝗨𝗦𝗘𝗥𝗕𝗢𝗧 ",
     )
