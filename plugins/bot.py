@@ -1,4 +1,3 @@
-
 """
 💐 Commands Available
 
@@ -29,9 +28,10 @@ from datetime import datetime as dt
 from platform import python_version as pyver
 
 from git import Repo
-from PandaX_Userbot.version import __version__ as UltVer
 from telethon import __version__, events
 from telethon.errors.rpcerrorlist import ChatSendMediaForbiddenError
+
+from PandaX_Userbot.version import __version__ as UltVer
 
 from . import *
 
@@ -42,7 +42,11 @@ from . import *
 async def lol(ult):
     pic = udB.get("ALIVE_PIC")
     uptime = grt(time.time() - start_time)
-    header = udB.get("ALIVE_TEXT") if udB.get("ALIVE_TEXT") else "Selamat, Panda userbot is alive boss 👩🏻‍🎤."
+    header = (
+        udB.get("ALIVE_TEXT")
+        if udB.get("ALIVE_TEXT")
+        else "Selamat, Panda userbot is alive boss 👩🏻‍🎤."
+    )
     y = Repo().active_branch
     xx = Repo().remotes[0].config_reader.get("url")
     rep = xx.replace(".git", f"/tree/{y}")
