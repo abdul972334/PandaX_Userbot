@@ -1,4 +1,3 @@
-
 """
 💐 Commands Available -
 
@@ -137,11 +136,17 @@ async def bban(ult):
     await ult.get_chat()
     user, reason = await get_user_info(ult)
     if not user:
-        return await xx.edit("`balas ke pengguna atau berikan username nya untuk membanned nya!`")
+        return await xx.edit(
+            "`balas ke pengguna atau berikan username nya untuk membanned nya!`"
+        )
     if str(user.id) in DEVLIST:
-        return await xx.edit(" `anda melawak?, saya tidak dapat mem-banned developer saya 😂`")
+        return await xx.edit(
+            " `anda melawak?, saya tidak dapat mem-banned developer saya 😂`"
+        )
     try:
-        await petercordpanda_bot.edit_permissions(ult.chat_id, user.id, view_messages=False)
+        await petercordpanda_bot.edit_permissions(
+            ult.chat_id, user.id, view_messages=False
+        )
     except BadRequestError:
         return await xx.edit("`saya tidak memiliki izin untuk membanned pengguna.`")
     except UserIdInvalidError:
@@ -174,9 +179,13 @@ async def uunban(ult):
     await ult.get_chat()
     user, reason = await get_user_info(ult)
     if not user:
-        return await xx.edit("`balas ke pengguna atau berikan username nya untuk melepas nya dari banned!`")
+        return await xx.edit(
+            "`balas ke pengguna atau berikan username nya untuk melepas nya dari banned!`"
+        )
     try:
-        await petercordpanda_bot.edit_permissions(ult.chat_id, user.id, view_messages=True)
+        await petercordpanda_bot.edit_permissions(
+            ult.chat_id, user.id, view_messages=True
+        )
     except BadRequestError:
         return await xx.edit("`saya tidak memiliki izin untuk unbanned pengguna.`")
     except UserIdInvalidError:
@@ -313,7 +322,9 @@ async def fastpurger(purg):
         return
     if match and not purg.is_reply:
         p = 0
-        async for msg in petercordpanda_bot.iter_messages(purg.chat_id, limit=int(match)):
+        async for msg in petercordpanda_bot.iter_messages(
+            purg.chat_id, limit=int(match)
+        ):
             await msg.delete()
             p += 0
         return await eod(purg, f"Purged {p} Messages! ")
@@ -321,7 +332,9 @@ async def fastpurger(purg):
     count = 0
     if not (purg.reply_to_msg_id or match):
         return await eod(purg, "`Reply to a message to purge from.`", time=10)
-    async for msg in petercordpanda_bot.iter_messages(chat, min_id=purg.reply_to_msg_id):
+    async for msg in petercordpanda_bot.iter_messages(
+        chat, min_id=purg.reply_to_msg_id
+    ):
         msgs.append(msg)
         count = count + 1
         msgs.append(purg.reply_to_msg_id)
