@@ -5,7 +5,7 @@ from . import *
 
 REPOMSG = (
     "💐 **Panda USERBOT** 💐\n\n",
-    "REPO - [REPO](https://github.com/IlhamMansiez/PetercordPanda)\n",
+    "REPO - [REPO](https://github.com/IlhamMansiez/PandaX_Userbot)\n",
     "ADDONS - [ADDONS](https://github.com/IlhamMansiez/PetercordPandaAddons)\n",
     "SUPPORT - @TEAMSquadUserbotSupport",
 )
