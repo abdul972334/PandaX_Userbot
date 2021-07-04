@@ -19,7 +19,7 @@ cairosvg
 emoji
 GitPython
 googletrans==4.0.0rc1
-git+https://github.com/ProgrammingError/heroku3.py
+git+https://github.com/ilhammansiz/heroku3.py
 imutils
 lottie
 lxml
