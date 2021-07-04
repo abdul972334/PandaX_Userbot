@@ -1,4 +1,3 @@
-
 import re
 
 from telethon.errors.rpcerrorlist import (
@@ -79,7 +78,9 @@ async def all_messages_catcher(e):
                 "The Chat Id You Set In Tag Logger Is Wrong , Please Correct It",
             )
         except ChatWriteForbiddenError:
-            await petercordpanda_bot.send_message(NEEDTOLOG, "Please Give Your Assistant Bot")
+            await petercordpanda_bot.send_message(
+                NEEDTOLOG, "Please Give Your Assistant Bot"
+            )
         except Exception as er:
             LOGS.info(str(er))
     else:
