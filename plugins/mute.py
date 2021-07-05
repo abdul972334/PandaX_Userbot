@@ -83,7 +83,7 @@ async def startmute(event):
         await eod(xx, "Error: " + f"`{str(e)}`")
 
 
-@ilhammansi_cmd(
+@ilhammansiz_cmd(
     pattern="undmute ?(.*)",
 )
 async def endmute(event):
