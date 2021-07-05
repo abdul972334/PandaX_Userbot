@@ -3,10 +3,10 @@ _get_ziplink () {
     regex='(https?)://github.com/.+/.+'
     if [[ $PANDA_USERBOT_REPO == "PANDA_USERBOT" ]]
     then
-        echo "aHR0cHM6Ly9naXRodWIuY29tL2lsaGFtbWFuc2l6L1BhbmRhWF9Vc2VyYm90L2FyY2hpdmUvUGFuZGFVc2VyYm90LnppcA==" | base64 -d
+        echo "aHR0cHM6Ly9naXRodWIuY29tL0lsaGFtTWFuc2llei9QYW5kYVhfVXNlcmJvdC9hcmNoaXZlL1BhbmRhVXNlcmJvdC56aXA=" | base64 -d
     elif [[ $PANDA_USERBOT_REPO == "PANDA_USERBOT" ]]
     then
-        echo "aHR0cHM6Ly9naXRodWIuY29tL2lsaGFtbWFuc2l6L1BhbmRhWF9Vc2VyYm90L2FyY2hpdmUvUGFuZGFVc2VyYm90LnppcA==" | base64 -d
+        echo "aHR0cHM6Ly9naXRodWIuY29tL0lsaGFtTWFuc2llei9QYW5kYVhfVXNlcmJvdC9hcmNoaXZlL1BhbmRhVXNlcmJvdC56aXA=" | base64 -d
     elif [[ $PANDA_USERBOT_REPO =~ $regex ]]
     then
         if [[ $PANDA_USERBOT_REPO_BRANCH ]]
@@ -16,7 +16,7 @@ _get_ziplink () {
             echo "${PANDA_USERBOT_REPO}/archive/PandaUserbot.zip"
         fi
     else
-        echo "aHR0cHM6Ly9naXRodWIuY29tL2lsaGFtbWFuc2l6L1BhbmRhWF9Vc2VyYm90L2FyY2hpdmUvUGFuZGFVc2VyYm90LnppcA==" | base64 -d
+        echo "aHR0cHM6Ly9naXRodWIuY29tL0lsaGFtTWFuc2llei9QYW5kYVhfVXNlcmJvdC9hcmNoaXZlL1BhbmRhVXNlcmJvdC56aXA=" | base64 -d
     fi
 }
 
@@ -28,7 +28,7 @@ _get_repolink () {
     then
         rlink=`echo "${UPSTREAM_REPO}"`
     else
-        rlink=`echo "aHR0cHM6Ly9naXRodWIuY29tL2lsaGFtbWFuc2l6L1BhbmRhWF9Vc2VyYm90" | base64 -d`
+        rlink=`echo "aHR0cHM6Ly9naXRodWIuY29tL0lsaGFtTWFuc2llei9QYW5kYVhfVXNlcmJvdA==" | base64 -d`
     fi
     echo "$rlink"
 }
