@@ -1,4 +1,3 @@
-
 """
 💐 Commands Available
 •`{i}warn <reply to user> <reason>`
@@ -14,8 +13,9 @@
    Example : `setwarn 5 | mute`
 """
 
-from PandaX_Userbot.functions.warn_db import *
 from telethon.utils import get_display_name
+
+from PandaX_Userbot.functions.warn_db import *
 
 from . import *
 
@@ -60,7 +60,9 @@ async def warn(e):
     if count + 1 >= number:
         if "ban" in action:
             try:
-                await petercordpanda_bot.edit_permissions(e.chat_id, user, view_messages=False)
+                await petercordpanda_bot.edit_permissions(
+                    e.chat_id, user, view_messages=False
+                )
             except BaseException:
                 return await eod(e, "`Something Went Wrong.`")
         elif "kick" in action:
