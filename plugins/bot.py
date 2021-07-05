@@ -45,7 +45,7 @@ async def lol(ult):
     header = (
         udB.get("ALIVE_TEXT")
         if udB.get("ALIVE_TEXT")
-        else "Selamat, Panda userbot is alive boss 👩🏻‍🎤."
+        else "Selamat, Panda userbot is alive boss 🐼."
     )
     y = Repo().active_branch
     xx = Repo().remotes[0].config_reader.get("url")
