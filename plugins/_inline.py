@@ -439,7 +439,8 @@ async def on_plug_in_callback_query_handler(event):
 @callback("ilham")
 @owner
 async def on_plug_in_callback_query_handler(event):
-    await event.edit("✖ Terhapus ✖")
+    await event.edit("✖ Terhapus ✖"
+   )
 
 
 @callback(
