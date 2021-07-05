@@ -1,4 +1,3 @@
-
 """
 💐 Commands Available -
 
@@ -23,9 +22,10 @@
 """
 
 
+from telethon import events
+
 from PandaX_Userbot.functions.all import ban_time
 from PandaX_Userbot.functions.mute_db import is_muted, mute, unmute
-from telethon import events
 
 from . import *
 
@@ -108,7 +108,9 @@ async def endmute(event):
         return await eod(xx, "`balas ke pengguna atau berikan id nya.`", time=5)
     chat_id = event.chat_id
     if not is_muted(f"{userid}_{chat_id}"):
-        return await eod(xx, "`pengguna ini sudah tidak dibisukan di obrolan ini.`", time=3)
+        return await eod(
+            xx, "`pengguna ini sudah tidak dibisukan di obrolan ini.`", time=3
+        )
     try:
         unmute(f"{userid}_{chat_id}")
         await eod(xx, "`berhasil di unmute...`", time=3)
