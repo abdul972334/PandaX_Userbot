@@ -1,5 +1,5 @@
 <a href="https://cooltext.com"><img src="https://images.cooltext.com/5536704.gif" width="711" height="78" alt="PANDA USERBOT" /></a>
-<img src="https://media.giphy.com/media/EPcvhM28ER9XW/giphy.gif">
+<img src="https://media.giphy.com/media/KyBX9ektgXWve/giphy.gif">
 
 
 ## [ILHAM MANSIZ](https://t.me/diemmmmmmmmmm)
