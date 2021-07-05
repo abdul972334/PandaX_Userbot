@@ -190,7 +190,7 @@ async def crbn(event):
             event, "`terjadi kesalahan server sementara !!\nsilahkan coba lagi nanti.`"
         )
     carbon = Carbon(base_url="https://carbonara.vercel.app/api/cook", code=code)
-    xx = await carbon.memorize("petercordpanda_carbon")
+    xx = await carbon.memorize("ultroid_carbon")
     await xxxx.delete()
     await petercordpanda_bot.send_file(
         event.chat_id,
@@ -225,7 +225,7 @@ async def crbn(event):
     carbon = Carbon(
         base_url="https://carbonara.vercel.app/api/cook", code=code, background=col
     )
-    xx = await carbon.memorize("petercordpanda_carbon")
+    xx = await carbon.memorize("ultroid_carbon")
     await xxxx.delete()
     await petercordpanda_bot.send_file(
         event.chat_id,
