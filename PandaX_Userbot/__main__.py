@@ -310,7 +310,7 @@ addons = udB.get("ADDONS")
 if addons == "True" or addons is None:
     try:
         os.system(
-            "git clone https://github.com/IlhamMansiez/PetercordPandaAddons.git addons/"
+            "git clone https://github.com/ilhammansiz/PandaX_UserbotAddons addons/"
         )
     except BaseException:
         pass
