@@ -1,4 +1,3 @@
-
 """
 💐 Commands Available -
 
@@ -84,7 +83,9 @@ async def editer(edit):
             pass
     else:
         i = 1
-        async for message in petercordpanda_bot.iter_messages(chat, petercordpanda_bot.uid):
+        async for message in petercordpanda_bot.iter_messages(
+            chat, petercordpanda_bot.uid
+        ):
             if i == 2:
                 await message.edit(string)
                 await edit.delete()
