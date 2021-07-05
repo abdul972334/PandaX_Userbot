@@ -435,6 +435,7 @@ async def on_plug_in_callback_query_handler(event):
         buttons=Button.inline("✖ Hapus Semua ✖", data="ilham"),
     )
 
+
 @callback("ilham")
 @owner
 async def on_plug_in_callback_query_handler(event):
