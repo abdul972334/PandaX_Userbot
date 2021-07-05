@@ -6,8 +6,7 @@ from .connections import client_connection, redis_connection, vc_connection
 
 LOGS = getLogger(__name__)
 
-TEMP_DOWNLOAD_DIRECTORY = os.environ.get("TEMP_DOWNLOAD_DIRECTORY",
-                                         "./downloads")
+TEMP_DOWNLOAD_DIRECTORY = os.environ.get("TEMP_DOWNLOAD_DIRECTORY", "./downloads")
 
 START_TIME = dt.now()
 
