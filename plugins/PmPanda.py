@@ -1,4 +1,3 @@
-
 """
 📚 Commands Available -
 
@@ -32,12 +31,13 @@
 
 import re
 
-from PandaX_Userbot.functions.logusers_db import *
-from PandaX_Userbot.functions.pmpermit_db import *
 from telethon import events
 from telethon.tl.functions.contacts import BlockRequest, UnblockRequest
 from telethon.tl.functions.messages import ReportSpamRequest
 from telethon.utils import get_display_name
+
+from PandaX_Userbot.functions.logusers_db import *
+from PandaX_Userbot.functions.pmpermit_db import *
 
 from . import *
 
@@ -98,9 +98,13 @@ async def _(e):
         return await eod(e, "`gunakan saya di private chat.`", time=3)
     if is_logger(str(e.chat_id)):
         nolog_user(str(e.chat_id))
-        return await eod(e, "`mulai sekarang saya akan mencatat log pesan disini.`", time=3)
+        return await eod(
+            e, "`mulai sekarang saya akan mencatat log pesan disini.`", time=3
+        )
     else:
-        return await eod(e, "`mulai sekarang saya tidak akan mencatat log pesan disini.`", time=3)
+        return await eod(
+            e, "`mulai sekarang saya tidak akan mencatat log pesan disini.`", time=3
+        )
 
 
 @ilhammansiz_cmd(
@@ -111,7 +115,9 @@ async def _(e):
         return await eod(e, "`gunakan saya di private chat.`", time=3)
     if not is_logger(str(e.chat_id)):
         log_user(str(e.chat_id))
-        return await eod(e, "`sekarang saya tidak akan mencatat log pesan disini.`", time=3)
+        return await eod(
+            e, "`sekarang saya tidak akan mencatat log pesan disini.`", time=3
+        )
     else:
         return await eod(e, "`tidak akan lagi mencatat log pesan disini.`", time=3)
 
@@ -331,10 +337,16 @@ if sett == "True":
         x = e.pattern_match.group(1)
         if x == "start":
             udB.set("MOVE_ARCHIVE", "True")
-            await eod(e, "sekarang saya akan memindahkan dm baru yang tidak disetujui ke arsip")
+            await eod(
+                e,
+                "sekarang saya akan memindahkan dm baru yang tidak disetujui ke arsip",
+            )
         elif x == "stop":
             udB.set("MOVE_ARCHIVE", "False")
-            await eod(e, "sekarang saya tidak akan memindahkan dm baru yang tidak disetujui ke arsip")
+            await eod(
+                e,
+                "sekarang saya tidak akan memindahkan dm baru yang tidak disetujui ke arsip",
+            )
         elif x == "clear":
             try:
                 await e.client.edit_folder(unpack=1)
@@ -363,7 +375,10 @@ if sett == "True":
                     await apprvpm.client.edit_folder(uid, folder=0)
                 except BaseException:
                     pass
-                await eod(apprvpm, f"[{name0}](tg://user?id={uid}) `disetujui untuk melakukan pm, tolong jangan melakukan spam juga yah!`")
+                await eod(
+                    apprvpm,
+                    f"[{name0}](tg://user?id={uid}) `disetujui untuk melakukan pm, tolong jangan melakukan spam juga yah!`",
+                )
                 await asst.edit_message(
                     int(udB.get("LOG_CHANNEL")),
                     _not_approved[uid],
@@ -391,7 +406,10 @@ if sett == "True":
                     await apprvpm.client.edit_folder(uid, folder=0)
                 except BaseException:
                     pass
-                await eod(apprvpm, f"[{name0}](tg://user?id={uid}) `disetujui untuk melakukan pm, tolong jangan lakukan spam yah!`")
+                await eod(
+                    apprvpm,
+                    f"[{name0}](tg://user?id={uid}) `disetujui untuk melakukan pm, tolong jangan lakukan spam yah!`",
+                )
                 async for message in apprvpm.client.iter_messages(user.id, search=UND):
                     await message.delete()
                 async for message in apprvpm.client.iter_messages(user.id, search=UNS):
@@ -467,7 +485,9 @@ if sett == "True":
             name0 = str(aname.first_name)
             if is_approved(bbb.id):
                 disapprove_user(bbb.id)
-                await e.edit(f"[{name0}](tg://user?id={bbb.id}) `ditolak untuk melakukan pm!`")
+                await e.edit(
+                    f"[{name0}](tg://user?id={bbb.id}) `ditolak untuk melakukan pm!`"
+                )
                 await asyncio.sleep(5)
                 await e.delete()
                 try:
@@ -490,7 +510,9 @@ if sett == "True":
                         ],
                     )
             else:
-                await e.edit(f"[{name0}](tg://user?id={bbb.id}) tidak akan pernah disetujui!")
+                await e.edit(
+                    f"[{name0}](tg://user?id={bbb.id}) tidak akan pernah disetujui!"
+                )
                 await asyncio.sleep(5)
                 await e.delete()
         else:
@@ -609,7 +631,9 @@ async def apr_in(event):
         async for message in petercordpanda.iter_messages(uid, search=UNS):
             await message.delete()
         await event.answer("disetujui.")
-        x = await petercordpanda.send_message(uid, "anda telah disetujui untuk melakukan pm ke saya!")
+        x = await petercordpanda.send_message(
+            uid, "anda telah disetujui untuk melakukan pm ke saya!"
+        )
         await asyncio.sleep(5)
         await x.delete()
     else:
@@ -644,7 +668,9 @@ async def disapr_in(event):
             ],
         )
         await event.answer("DisApproved.")
-        x = await petercordpanda.send_message(uid, "anda telah ditolak untuk melakukan pm ke saya!")
+        x = await petercordpanda.send_message(
+            uid, "anda telah ditolak untuk melakukan pm ke saya!"
+        )
         await asyncio.sleep(5)
         await x.delete()
     else:
