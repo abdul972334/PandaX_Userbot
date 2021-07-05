@@ -431,7 +431,7 @@ async def on_plug_in_callback_query_handler(event):
     await event.edit(
         get_string("inline_5"),
         file=_file_to_replace,
-        buttons=Button.inline("☑ ᴏᴘᴇɴ ᴀɢᴀɪɴ ☑", data="open"),      
+        buttons=Button.inline("☑ ᴏᴘᴇɴ ᴀɢᴀɪɴ ☑", data="open"),
     )
 
 
